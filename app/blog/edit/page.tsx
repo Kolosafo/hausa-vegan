@@ -1,10 +1,8 @@
 "use client";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-// import { singlePost, updatePost } from "../../utils/api/blog";
 import { useRouter, useSearchParams } from "next/navigation";
-// import { UserContext } from "../../Context/User/UserContext";
 import { RotatingTriangles } from "react-loader-spinner";
 import { ToastContainer, toast } from "react-toastify";
 import Image from "next/image";
@@ -13,7 +11,6 @@ import { doc, getDoc, setDoc } from "firebase/firestore";
 import { db } from "@/firebase";
 const EditBlog = () => {
   const notify = (arg: string) => toast(arg);
-  //   const { userData } = useContext(UserContext);
   const [saveLoading, setSaveLoading] = useState(false);
   const navigate = useRouter();
   const router: any = useSearchParams();

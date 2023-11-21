@@ -2,8 +2,6 @@
 import { useContext, useEffect, useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-// import { createPost } from "../../utils/api/blog";
-// import { Link, useNavigate } from "react-router-dom";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
@@ -13,13 +11,6 @@ import Image from "next/image";
 import { createPost } from "@/firebase/blog/createPost";
 import { BackendImgLoader } from "@/app/components/navbar";
 const CreateBlog = () => {
-  //   const profile_pic = userData.user?.profile_pic;
-  //   const bio = userData.user?.bio;
-  //   const twitter = userData.user?.twitter;
-  //   const github = userData.user?.github;
-  //   const portfolio = userData.user?.portfolio;
-  //   const linkedIn = userData.user?.linkedIn;
-
   const navigate = useRouter();
   const [saveBlog, setSaveBlog] = useState("Save");
   const [saveLoading, setSaveLoading] = useState(false);

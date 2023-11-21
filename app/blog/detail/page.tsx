@@ -1,13 +1,8 @@
 "use client";
-import { useParams } from "react-router-dom";
-import { BsGithub, BsTwitter, BsLinkedin, BsMailbox } from "react-icons/bs";
-import DummyImg from "../../assets/img/dummy_profile.jpg";
 import { useEffect, useState } from "react";
-// import { singlePost, singlePostViewOnly } from "../../utils/api/blog";
 import parse from "html-react-parser";
 import { FcGlobe } from "react-icons/fc";
 import { MdEmail } from "react-icons/md";
-// import { getUserInfo } from "../../utils/api/account";
 import { ColorRing, RotatingTriangles } from "react-loader-spinner";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
