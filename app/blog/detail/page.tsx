@@ -4,7 +4,7 @@ import { BsGithub, BsTwitter, BsLinkedin, BsMailbox } from "react-icons/bs";
 import DummyImg from "../../assets/img/dummy_profile.jpg";
 import { useEffect, useState } from "react";
 // import { singlePost, singlePostViewOnly } from "../../utils/api/blog";
-import ReactHtmlParser from "react-html-parser";
+import parse from "html-react-parser";
 import { FcGlobe } from "react-icons/fc";
 import { MdEmail } from "react-icons/md";
 // import { getUserInfo } from "../../utils/api/account";
@@ -103,7 +103,7 @@ const ReadBlog = () => {
                   className="blogFontFamily text-[#181b38] leading-3 flex flex-col text-lg lg:text-lg justify-center flex-1 font-normal"
                   style={{ lineHeight: "revert" }}
                 >
-                  {ReactHtmlParser(post.content)}
+                  {parse(post.content)}
                 </div>
               </section>
               {/* <aside className="author_details basis-[35%] overflow-auto border-2 md:hidden lg:flex flex-col p-2 w-full right-0 sticky top-44 h-fit max-md:hidden">
