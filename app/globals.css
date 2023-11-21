@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0; */
+  }
+}
+
+body {
+  color: rgb(51, 51, 51);
+}
+input,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: rgb(51, 51, 51);
+}
+
+@layer components {
+  .orangeText {
+    @apply text-[#f5ab1e];
+  }
+
+  .orangeTextBlackHover {
+    @apply text-[#f5ab1e] hover:text-[#333333] transition-colors delay-100;
+  }
+  .blackTextOrangeHover {
+    @apply text-[#333333] hover:text-[#f5ab1e] transition-colors delay-100;
+  }
+
+  .blackBgOrangeHover {
+    @apply bg-[#333333] text-white hover:bg-[#f5ab1e] hover:text-black transition-colors delay-100;
+  }
+
+  .blackText {
+    @apply text-[#333333];
+  }
+  .orangeBg {
+    @apply bg-[#f5ab1e];
+  }
+  .blackBg {
+    @apply bg-[#333333];
+  }
+  .whiteBgOrangeHover {
+    @apply bg-[#ffffff] hover:bg-[#f5ab1e] transition-colors delay-100;
+  }
+  .orangeBgWhiteHover {
+    @apply bg-[#f5ab1e] hover:bg-[#ffffff] hover:text-[#333333] transition-colors delay-100;
+  }
+  .fadedText {
+    @apply text-[#33333326];
+  }
+  .fullCenter {
+    @apply justify-center items-center;
+  }
+  .lightBlue {
+    @apply bg-blue-500;
+  }
+  .heroBg-1 {
+    background-image: url("/img/hero/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .heroBg-2 {
+    background-image: url("/img/hero/bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* color: #faf8ed; */
+  }
+  .heroBg-3 {
+    background-image: url("/img/hero/bg3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .heroBg-4 {
+    background-image: url("/img/shop/edu.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .heroBg-5 {
+    background-image: url("/img/shop/spices.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .heroBg-6 {
+    background-image: url("/img/shop/learning.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .heroBg-7 {
+    background-image: url("/img/shop/merch.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .heroBg-8 {
+    background-image: url("/img/shop/artifact.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .no-scrollbar {
+    @layer scrollbar-hide;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
